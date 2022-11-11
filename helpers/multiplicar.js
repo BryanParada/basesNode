@@ -1,24 +1,26 @@
 const fs = require('fs');
 
-const crearArchivo = async( base = 5, listar = false  ) =>{
+const crearArchivo = async( base = 5, listar = false, hasta = 10  ) =>{
 
     try {
  
-        let salida = '';
+        let salida = '', consola = '';
     
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= hasta; i++) {
        
-            salida += `${base} ${'x'.green} ${i} ${'='.cyan} ${ base * i} \n`;
+            salida += `${base} ${'x'} ${i} ${'='} ${ base * i} \n`;
+            consola += `${base} ${'x'.green} ${i} ${'='.cyan} ${ base * i} \n`;
             
             
          }
+ 
 
          if( listar ){
             console.log('=============='.cyan);
             console.log('Tabla del: '.blue, base); 
             console.log('=============='.cyan);
   
-            console.log(salida);
+            console.log(consola);
          }
                  
         

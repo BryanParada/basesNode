@@ -20,7 +20,8 @@ console.clear();
 
 //const base = 3;
  
-crearArchivo(argv.b, argv.l )
+ 
+crearArchivo(argv.b, argv.l, argv.h )
     .then( nombreArchivo => console.log(nombreArchivo.rainbow, 'creado'.green) )
     .catch( err => console.log(err) );
 
